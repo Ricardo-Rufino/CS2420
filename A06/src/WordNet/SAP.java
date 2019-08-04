@@ -37,7 +37,8 @@ public class SAP
         boolean[] visited  = new boolean[graph.V()];
         boolean[] recStack = new boolean[graph.V()];
 
-        for(int v = 0; v < graph.V(); v++){
+        for(int v = 0; v < graph.V(); v++)
+        {
             if(isCyclic(v, visited, recStack))
                 return false;
         }
@@ -58,7 +59,8 @@ public class SAP
         recStack[v] = true;                     // Vertex is added to recursive stack.
 
         // We now look at all the adjacent nodes of v.
-        for(int w : graph.adj(v)){
+        for(int w : graph.adj(v))
+        {
             if(isCyclic(w, visited, recStack))
                 return true;
         }
@@ -108,7 +110,8 @@ public class SAP
             {
                 results = BFS(i, j);
 
-                if(minDistance < 0 || results[1] < minDistance){
+                if(minDistance < 0 || results[1] < minDistance)
+                {
                     ancestor    = results[0];
                     minDistance = results[1];
                 }
@@ -131,7 +134,8 @@ public class SAP
 
         for(int i = 0; i < graph.V(); i++)
         {
-            if(vBFS.hasPathTo(i) && wBFS.hasPathTo(i)){
+            if(vBFS.hasPathTo(i) && wBFS.hasPathTo(i))
+            {
                 distance = vBFS.distTo(i) + wBFS.distTo(i);
 
                 if(minDistance < 0 || distance < minDistance)

@@ -3,7 +3,8 @@ package WordNet;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
-public class Outcast {
+public class Outcast
+{
     private final WordNet wd;
 
     // Constructor takes a WOrkNet object.

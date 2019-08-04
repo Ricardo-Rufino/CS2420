@@ -62,7 +62,8 @@ public class WordNet
 
             vLocator.put(id, new ArrayList<>());
             for(String noun : nouns){
-                if(!iLocator.contains(noun)){
+                if(!iLocator.contains(noun))
+                {
                     nounList.add(noun);
 
                     vLocator.get(id).add(noun);
@@ -86,7 +87,8 @@ public class WordNet
             edges = new Integer[line.length-1];
             vID   = Integer.parseInt(line[0]);
 
-            for(int i = 1; i < line.length; i++){
+            for(int i = 1; i < line.length; i++)
+            {
                 graph.addEdge(vID, Integer.parseInt(line[i]));
                 edges[i-1] = Integer.parseInt(line[i]);
             }
@@ -134,7 +136,8 @@ public class WordNet
         int commonAncestorID = sap.ancestor(listA, listB);
 
         String result = "";
-        for(String i : vLocator.get(commonAncestorID)){
+        for(String i : vLocator.get(commonAncestorID))
+        {
             result += i;
         }
 
