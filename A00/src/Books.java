@@ -1,6 +1,3 @@
-// Ricardo Rufino
-// Assignment A00
-
 import java.util.List;
 import java.util.Scanner;
 import java.io.FileReader;
@@ -40,10 +37,9 @@ public class Books implements Comparable<Books>
 		String line;
 		
 		String title; String author; int year;
-		
 		List<Books> list = new ArrayList<>();
 		
-		try(Scanner reader = new Scanner(new FileReader("src\\" + file))) 
+		try(Scanner reader = new Scanner(new FileReader("src/" + file)))
 		{
 			while(reader.hasNextLine())
 			{
@@ -83,6 +79,4 @@ public class Books implements Comparable<Books>
 	{
 		return this.getTitle().compareTo(other.getTitle());
 	}
-
-	
 }
